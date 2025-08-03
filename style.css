@@ -1,0 +1,126 @@
+.hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%; /* O grid ocupa 75% da largura */
+    margin-top: 100px; /* Espaço abaixo do título */
+    margin-left: 20%; /* Adiciona uma margem esquerda para mover o grid para mais perto do painel direito */
+}
+
+#board {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 100px;
+}
+
+.hexagon {
+    width: 85px;
+    height: 85px;
+    background-color: #745c8b3f;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: -9px 1px;
+    transition: 0.2s ease-in-out;
+}
+
+.hexagon:hover {
+    background-color: #64427a;
+}
+
+.hexagon.selected {
+    background-color: #f05858;
+}
+
+.row {
+    display: flex;
+}
+
+.row:nth-child(odd) {
+    margin-left: 85px; /* Stagger rows for tessellation */
+}
+
+.highlight {
+    background-color: #745c8b67;
+    transition: background-color 0.5s ease;
+}
+
+#start-button {
+    font-family: "Silkscreen";
+    display: block;
+    margin: 20px auto;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+#start-button:hover {
+    background-color: #745c8b3f;
+    color: #f0a500;
+}
+
+#reset {
+    font-family: "Silkscreen";
+    display: none;
+    /* display: block; */
+    margin: 20px auto;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f0a500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+#reset:hover {
+    background-color: #745c8b3f;
+    color: #f0a500;
+}
+
+.buttons {
+    margin-bottom: 50px;
+}
+
+body {
+    font-family: "Eater";
+    background-color: #1a1a1b;
+    color: #ffffff;
+    display: flex;
+    margin: 0;
+    text-align: center; 
+    flex-direction: column;
+}
+
+h1 {
+    font-family: "Eater";
+    color: #ffae00;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.left-panel {
+    font-family: "Silkscreen";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #745c8b3f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+} 

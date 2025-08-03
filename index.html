@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster Mayhem</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+  <div class="container">
+    <section>
+      <div class="left-panel">
+        <h1>Monster Mayhem</h1>
+        <div class="buttons">
+          <button id="start-button">START GAME</button>
+          <!-- <button id="end-turn">END TURN</button> -->
+        </div>
+
+        <form id="name-form">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name">
+          <button type="submit">Submit</button>
+        </form>
+
+        <h2>Names</h2>
+        <div class="players-info">
+          <p class="player-names" id="player-1-name">Player 1:</p>
+          <p id="player-1-monsters">Monsters Down: 0</p>
+          <p class="player-names" id="player-2-name">Player 2:</p>
+          <p id="player-2-monsters">Monsters Down: 0</p>
+          <p class="player-names" id="player-3-name">Player 3:</p>
+          <p id="player-3-monsters">Monsters Down: 0</p>
+          <p class="player-names" id="player-4-name">Player 4:</p>
+          <p id="player-4-monsters">Monsters Down: 0</p>
+        </div>
+          <button id="reset">RESET BOARD</button>
+      </div>    
+    </section>
+    <div class="hex-grid">
+      <div id="board"></div>
+    </div>
+  </div> 
 </body>
+<script src="script.js"></script>
 </html>
